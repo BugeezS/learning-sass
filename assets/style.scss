@@ -1,0 +1,70 @@
+html{
+    background-color: antiquewhite;
+    font: {
+        size: 1em;
+        family: arial;
+    }
+}
+.container{
+    display: grid;
+    grid-template-columns: 400px;
+    grid-template-rows: 266px;
+    place-content: center;
+}
+#imgind{
+    background: url("/src/reizen-vrouw-india-1675x1116.jpg");
+    background-size: 400px 266px;
+    .date{
+        color: white;
+        position: relative;
+        top: 10px;
+        left: 330px;
+        margin: 10px;
+        width: 50px;
+        height: 50px;
+        background: red;
+        text-align: center;
+        border-radius: 100px;
+        line-height: 25px;
+    }
+    img{
+        width: 400px;
+        padding-top: 10px;
+
+    }
+    .photo{
+        color: white;
+        font-weight: bold;
+        position: relative;
+        top: 146px;
+        background: red;
+        width: 100px;
+        height: 40px;
+        font-size: 20px;
+        text-align: center;
+        line-height: 35px;
+
+    }
+}
+#titleind{
+    background-color: white;
+    h1{
+        padding-left: 10px;
+    }
+    p{
+        padding-left: 10px;
+        font-size: 22px;
+        color: red;
+    }
+
+}
+#textind{
+    background-color: white;
+    visibility: hidden;
+    p{
+        padding-left: 10px;
+    }
+}
+#texind:hover{
+    visibility: visible;
+}
