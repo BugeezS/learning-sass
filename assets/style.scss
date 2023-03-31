@@ -1,5 +1,5 @@
 html{
-    background-color: antiquewhite;
+    background-color: wheat;
     font: {
         size: 1em;
         family: arial;
@@ -7,9 +7,13 @@ html{
 }
 .container{
     display: grid;
-    grid-template-columns: 400px;
-    grid-template-rows: 266px;
-    place-content: center;
+    grid-template-columns: 400px ;
+    grid-template-rows: 266px 1fr 1fr;
+    width: 400px;
+    height: 266px;
+    position: absolute;
+    top:10px;
+    left: 700px;
 }
 #imgind{
     background: url("/src/reizen-vrouw-india-1675x1116.jpg");
@@ -47,6 +51,7 @@ html{
     }
 }
 #titleind{
+    padding-bottom: 5px;
     background-color: white;
     h1{
         padding-left: 10px;
@@ -59,12 +64,45 @@ html{
 
 }
 #textind{
+
     background-color: white;
-    visibility: hidden;
+    overflow: hidden;
+    max-height: 0px;
+    transition: max-height 1s ease-out;
     p{
         padding-left: 10px;
+    }   
+}
+#info{
+    background-color: white;
+    padding-left: 10px;
+}
+.container:hover{
+    max-height: 200px;
+    #textind{
+        background-color: white;
+        overflow: visible;
+        font-size: 17px;
+        position: relative;
+        top:-80px;  
+        max-height: 200px;
+        padding-bottom: 8px;
+        z-index: 0;
+
+
     }
+     #titleind{
+         position: relative;
+         top:-80px;
+     }
+      #info{
+          position:relative;
+          top:-80px;
+
+     }
+     #imgind{
+        filter: blur(3px);
+     }
 }
-#texind:hover{
-    visibility: visible;
-}
+
+
