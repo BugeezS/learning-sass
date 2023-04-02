@@ -95,6 +95,9 @@ body:hover .container2 :first-child {
 body:hover .container2 :last-child {
   margin-bottom: -20px;
 }
-body:hover .bgimg {
-  filter: blur(2px);
+body:hover .bgimg :first-child {
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  padding-top: 5px;
+  margin-bottom: 1000px;
 }/*# sourceMappingURL=style.css.map */
