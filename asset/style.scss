@@ -1,0 +1,116 @@
+html {
+  font-family: Arial, Helvetica, sans-serif;
+}
+body {
+  background-color: wheat;
+  max-width: 350px;
+}
+.container {
+  display: grid;
+  grid-template-columns: 175px 175px;
+  grid-template-rows: 250px;
+  padding-top: 10px;
+  position: absolute;
+  left: 700px;
+  z-index: -1;
+  div {
+    :first-child {
+      position: relative;
+      left: 280px;
+      color: white;
+      background-color: red;
+      width: 50px;
+      height: 50px;
+      border-radius: 35px;
+      text-align: center;
+    }
+    :last-child {
+      position: relative;
+      top: 120px;
+      color: white;
+      background-color: red;
+      padding: 15px;
+      width: 70px;
+      text-align: center;
+    }
+  }
+}
+%animation {
+  transition-property: transform;
+  transition-duration: 3s;
+  z-index: 10000;
+}
+%animation2 {
+  transform: translate(0px, -70px);
+}
+.bgimg {
+  background-image: url("/src/reizen-vrouw-india-1675x1116.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  grid-column: 1 / 3;
+}
+.container2 {
+  display: grid;
+  grid-template-columns: 350px;
+  grid-template-rows: 1fr;
+  background-color: white;
+  position: absolute;
+  left: 700px;
+  top: 250px;
+  @extend %animation;
+  :first-child {
+    padding-left: 10px;
+    font-size: 25px;
+    @extend %animation;
+    font-weight: bold;
+    margin-bottom: -10px;
+    background-color: white;
+    padding-bottom: 18px;
+  }
+  :nth-child(2) {
+    padding-left: 10px;
+    font-size: 20px;
+    @extend %animation;
+    color: red;
+  }
+  :last-child {
+    padding-left: 10px;
+    @extend %animation;
+  }
+  .hidden {
+    display: none;
+    @extend %animation;
+  }
+}
+body:hover {
+  .container2 {
+    @extend %animation2;
+    .hidden {
+      display: inline;
+      padding-left: 10px;
+      font-size: 15px;
+      padding-left: 10px;
+      @extend %animation2;
+    }
+    :first-child {
+      @extend %animation2;
+      background-color: white;
+      padding: 8px;
+    }
+    :nth-child(2) {
+      @extend %animation2;
+    }
+    :last-child {
+      @extend %animation2;
+      margin-bottom: -20px;
+    }
+  }
+  .bgimg{
+    :first-child{
+        // z-index: 2000;
+        backdrop-filter: blur(5px);
+        padding-top: 5px;
+        margin-bottom: 1000px;
+    }
+  }
+}
